@@ -1,0 +1,134 @@
+.navbar_links li .active{
+    color: var(--color-greenishYellow);
+}
+
+.app_navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    align-items: center;
+}
+
+.img_container img {
+    width: 2.5rem;
+    margin: 1rem;
+}
+
+.navbar_links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar_links li a{
+    font-family: var(--font-base);
+    font-size: 1rem;
+    color: var(--color-greenishBlack);
+    margin: 1.5rem;
+    text-decoration: none;
+}
+
+.search_bar{
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 20px;
+    width: 10rem;
+    height: max-content;
+    background-color: transparent;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.search_bar:focus{
+    background-color: #c1c8d4;
+    transition: ease-in-out, width .35s ease-in-out;
+}
+
+.user_interests{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.user_interests li{
+    font-family: var(--font-base);
+    font-size: 1rem;
+    color: var(--color-greenishBlack);
+    margin: 1.5rem;
+    display: flex;
+}
+
+.user_interests li .user_icons{
+    align-self: center;
+    margin-left: 0.5rem;
+}
+
+.app_navbar_smallscreen{
+    display: none;
+}
+
+.app_navbar_smallscreen_overlay{
+    position: absolute;
+    width: 50%;
+    top: 0;
+    left: 50%;
+    height: 100vh;
+    z-index: 20;
+    background-color:#fcfc;
+    transition: all 3s ease-out;
+}
+
+.app_navbar_smallscreen #burger_menu{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.app_navbar_smallscreen_overlay #screen_close{
+    position: fixed;
+    left: 92.5%;
+    top: 1.5%;
+    cursor: pointer;
+}
+
+@media screen and (max-width:992px) {
+    .user_interests{
+        display: none;
+    }
+
+    .app_navbar_smallscreen{
+        display: flex;
+    }
+
+    .user_interests_smallscreen{
+        list-style: none;
+        display: grid;
+        grid-gap: 3rem;
+        margin: 4rem;
+    }
+
+    .user_interests_smallscreen li{
+        display: grid;
+        place-items: center;
+    }
+
+    .navbar_links li a{
+        font-size: 0.75rem;
+        margin: 0.75rem;
+    }
+
+    .img_container img {
+        width: 1.25rem;
+        margin: 0.5rem;
+    }
+
+    .app_navbar {
+        justify-content: space-between;
+    }
+
+    .search_bar{
+        width: 4rem;
+        padding: 0.20rem;
+    }
+}

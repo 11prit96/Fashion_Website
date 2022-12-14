@@ -1,0 +1,17 @@
+.footer{
+    text-align: center;
+    font-family: var(--font-base);
+    color: var(--color-greenishBlack);
+    font-size: 1rem;
+    border-color: var(--color-greenishYellow);
+}
+
+.copyright_info, .creator_info{
+    padding-bottom: 0.5rem;
+}
+
+@media screen and (max-width:600px) {
+    .footer{
+        display: none;
+    }
+}

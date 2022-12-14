@@ -1,0 +1,38 @@
+.app_header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.app_header img {
+    margin: 5rem;
+    width: 250px;
+    height: max-content;
+}
+
+.app_header h3 {
+    margin: 5rem;
+    font-size: 1.5rem;
+    color: #3b3b3b;
+    font-family: var(--font-alt);
+}
+
+@media screen and (max-width:992px) {
+    .app_header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .app_header img {
+        margin: 2rem;
+        width: 200px;
+        height: max-content;
+    }
+
+    .app_header h3 {
+        margin: 2rem;
+        font-size: 0.75rem;
+    }
+}
